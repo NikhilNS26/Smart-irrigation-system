@@ -1,2 +1,4 @@
 # Edge-Based Smart Irrigation System for Precision Agriculture
+## Overview:
+The Edge AI Precision Irrigation System is a fully autonomous, on-device solution for dynamically adjusting water supply to nursery-stage crops (e.g. onion seedlings) in response to environmental and crop conditions. It integrates historical climate data and real-time soil moisture sensing into a machine learning inference engine running on a microcontroller, which computes the crop’s current water demand and controls a pump actuation without cloud reliance. In our implementation, weather inputs (Tmax, RH, Irradiation) by weather API feed an MLP-based model on a Raspberry Pi Pico W to estimate daily reference evapotranspiration (ET₀) and then derive actual crop evapotranspiration (ET₀×Kc). This computed water requirement is used by the Pico to set the irrigation volume, and an ESP32 node drives a water pump via MQTT for the calculated duration.
 
